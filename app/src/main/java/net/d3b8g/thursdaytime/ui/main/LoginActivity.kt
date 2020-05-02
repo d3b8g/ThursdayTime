@@ -1,7 +1,5 @@
 package net.d3b8g.thursdaytime.ui.main
 
-import android.app.ActionBar
-import android.content.ClipData
 import android.content.Context
 import android.content.Intent
 import android.graphics.Typeface
@@ -16,8 +14,6 @@ import net.d3b8g.thursdaytime.MainActivity
 import net.d3b8g.thursdaytime.R
 import net.d3b8g.thursdaytime.app.main.shared.doingLogin
 import net.d3b8g.thursdaytime.app.main.shared.hadLogin
-import javax.xml.parsers.DocumentBuilder
-import javax.xml.parsers.DocumentBuilderFactory
 
 class LoginActivity:AppCompatActivity() {
 
@@ -75,7 +71,7 @@ class LoginActivity:AppCompatActivity() {
         var productVersion = "${this.packageManager.getPackageInfo(this.packageName,0).versionName} (${this.packageManager.getPackageInfo(this.packageName,0).versionCode})"
         t_product_version.text = productVersion
 
-        var githubLink = "https://github.com/d3b8g"
+        var githubLink = "https://github.com/d3b8g/ThursdayTime"
 
         btn_github.setOnClickListener {
             var openURL = Intent(Intent.ACTION_VIEW)
