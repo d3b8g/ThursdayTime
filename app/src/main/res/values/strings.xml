@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ThursdayTime</string>
+    <string name="help">Помощь</string>
+    <string name="hide">Скрыть</string>
+    <string name="user_hash">Введите hash</string>
+    <string name="user_device">Введите ID девайса</string>
+    <string name="login">Войти</string>
+    <string name="create_report">Зарезервировать отчет</string>
+    <string name="support_rcv">Каждый ID продукта содержит зарезервированные отчеты, которые будут отправлены после нажатия на ID продукта,в который Вас добавили.</string>
+    <string name="product">ID Продукта</string>
+    <string name="title">Заголовок</string>
+    <string name="steps">Шаги воспроизведения</string>
+    <string name="state_supposed">Ожидаемый результат</string>
+    <string name="state_actual">Фактический результат</string>
+    <string name="type_issue">Тип проблемы</string>
+    <string name="severity">Приоритет</string>
+    <string name="id_help">В конце ссылки на продукт</string>
+    <string name="clear_data">Очистить отчеты</string>
+
+</resources>

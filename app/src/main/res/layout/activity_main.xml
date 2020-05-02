@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="4dp"
+            android:id="@+id/create_report"
+            android:drawableStart="@drawable/ic_add_circle_black_24dp"
+            android:gravity="center"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:text="@string/create_report"
+            android:background="@drawable/shadow_button"
+            android:layout_width="220dp"
+            android:layout_height="60dp"/>
+        <Button
+            android:visibility="gone"
+            android:layout_marginStart="4dp"
+            android:layout_below="@id/create_report"
+            android:id="@+id/clear_data"
+            android:drawableStart="@drawable/ic_add_circle_black_24dp"
+            android:gravity="center"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:text="@string/clear_data"
+            android:background="@drawable/shadow_button"
+            android:layout_width="220dp"
+            android:layout_height="60dp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/rcv"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/create_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/line1"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_below="@id/rcv"
+            android:background="@color/colorGrey"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:orientation="vertical" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_margin="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- ID Продукта-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/t_id"
+                    android:layout_width="match_parent"
+                    app:endIconMode="custom"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="@string/product"
+                    app:errorEnabled="true">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/id_product"
+                        android:maxLength="4"
+                        android:inputType="number"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Title -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/t_title"
+                    android:layout_width="match_parent"
+                    app:endIconMode="custom"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="@string/title"
+                    app:errorEnabled="true">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--Steps  -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/t_steps"
+                    android:layout_width="match_parent"
+                    app:endIconMode="custom"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="@string/steps"
+                    app:errorEnabled="true">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/steps"
+                        android:layout_width="match_parent"
+                        android:maxLines="12"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- state actual -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/t_sa"
+                    app:endIconMode="custom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="@string/state_actual"
+                    app:errorEnabled="true">
+                    <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/state_actual"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- state supposed -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/t_ss"
+                    android:layout_width="match_parent"
+                    app:endIconMode="custom"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="@string/state_supposed"
+                    app:errorEnabled="true">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/state_supposed"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginRight="6dp"
+                android:layout_marginLeft="6dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_weight="1"
+                    style = "@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                    <AutoCompleteTextView
+                        android:focusableInTouchMode="true"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:id="@+id/severitY"
+                        android:layout_margin="4dp"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:layout_height="60dp"
+                        android:inputType="none|textNoSuggestions" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style = "@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                    <AutoCompleteTextView
+                        android:id="@+id/issue_type"
+                        android:focusableInTouchMode="true"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:layout_margin="4dp"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:layout_height="60dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

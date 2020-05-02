@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/it1" android:title="Падение приложения"/>
+    <item android:id="@+id/it2" android:title="Зависание приложения"/>
+    <item android:id="@+id/it3" android:title="Неработающая функциональность"/>
+    <item android:id="@+id/it4" android:title="Потеря данных"/>
+    <item android:id="@+id/it5" android:title="Производительность"/>
+    <item android:id="@+id/it6" android:title="Косметика"/>
+    <item android:id="@+id/it7" android:title="Ошибка в тексе"/>
+    <item android:id="@+id/it8" android:title="Пожелание"/>
+</menu>

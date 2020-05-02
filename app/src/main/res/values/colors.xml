@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4A76A8</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#0DE4CE</color>
+    <color name="colorText">#7293B6</color>
+    <color name="colorGrey">#A7ADB7</color>
+    <color name="colorRed">#E50700</color>
+    <color name="colorBlue">#569EEF</color>
+    
+    <!-- Color Severity's-->
+    <color name="sLow"></color>
+    <color name="sMiddle"></color>
+    <color name="sHigh"></color>
+    <color name="sCritical"></color>
+    <color name="sVul"></color>
+</resources>
